@@ -69,6 +69,12 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+--[[
+-- Here is 1 table
+-- If you have a plugin with no arguments you add it as a string
+-- If you have a plugin with opts than you add a second table with string and opts
+--]]
+
 require('lazy').setup({
   'NMAC427/guess-indent.nvim',
 
