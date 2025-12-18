@@ -428,6 +428,12 @@ require('lazy').setup({
     },
   },
     { 'Mofiqul/dracula.nvim', priority = 1000, config = function() require('dracula').setup { styles = {}, } vim.cmd.colorscheme 'dracula' end, },
+    {
+      'folke/todo-comments.nvim',
+      event = 'VimEnter',
+      dependencies = { 'nvim-lua/plenary.nvim' },
+      opts = { signs = false },
+    },
   {
     'echasnovski/mini.nvim',
     config = function()
