@@ -330,6 +330,10 @@ require('lazy').setup({
             },
           },
         },
+
+        omnisharp = {
+          cmd = { 'omnisharp' },
+        },
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
