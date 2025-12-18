@@ -385,6 +385,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        csharp = { 'csharpier' },
       },
     },
   },
