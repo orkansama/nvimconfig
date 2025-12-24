@@ -451,7 +451,7 @@ require('lazy').setup({
     end,
   },
   {
-    'nvim-jreesitter/nvim-treesitter',
+    'nvim-treesitter/nvim-treesitter',
     lazy = false,
     build = ':TSUpdate',
   },
