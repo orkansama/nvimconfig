@@ -11,6 +11,11 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+local function addOptsToConfig(pluginName)
+  local opts = require(pluginName)
+  require(pluginName).setup(opts)
+end
+
 return require('lazy').setup({
   'NMAC427/guess-indent.nvim',
   require 'plugins/gitsigns',
