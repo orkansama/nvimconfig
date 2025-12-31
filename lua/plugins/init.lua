@@ -1,3 +1,4 @@
+local lazydev = require 'plugins.lazydev'
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -22,8 +23,7 @@ return require('lazy').setup({
   {
     'folke/which-key.nvim',
     config = function()
-      local opts = require "which-key"
-      require("which-key").setup(opts)
+      addOptsToConfig 'which-key'
     end,
     event = 'VimEnter',
   },
@@ -88,15 +88,14 @@ return require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
-
   {
     'folke/lazydev.nvim',
-    ft = 'lua',
     opts = {
       library = {
         { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
       },
     },
+    ft = 'lua',
   },
   {
     'neovim/nvim-lspconfig',
