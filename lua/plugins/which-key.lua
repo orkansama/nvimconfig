@@ -1,4 +1,5 @@
 return {
+    'folke/which-key.nvim',
     opts = {
       delay = 0,
       icons = {
@@ -41,4 +42,5 @@ return {
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
+    event = 'VimEnter',
 }
